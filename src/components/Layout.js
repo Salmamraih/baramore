@@ -13,9 +13,9 @@ const Layout = ({ children }) => {
 
   const menuItems = [
     { id: 1, label: "Menu", link: "/#menu" },
-    { id: 2, label: "Booking", link: "/booking" },
-    { id: 3, label: "Takeaway", link: "/takeaway" },
-    { id: 4, label: "Our Story", link: "/our-story" },
+    { id: 2, label: "Booking", link: "https://book.dinnerbooking.com/dk/da-DK/book/index/3878/2", external: true },
+    
+   
     { id: 5, label: "Contact", link: "/contact" },
   ];
 
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
       <nav className={styles.nav}>
         <div className={styles.navContainer}>
           <Link className={styles.homeButton} href="/">
-            <img src="/assets/N74homebutton.svg" alt="home" />
+         
           </Link>
           <HamburgerMenu menuItems={menuItems} />
         </div>
@@ -68,31 +68,28 @@ const Layout = ({ children }) => {
             </div>
 
             <div className={styles.addressContainer}>
-              <p>Gammel Kongevej 74, København K</p>
-              <p>+45 00 00 00 00 </p>
-              <a href="mailto:info@capannadi74.dk">info@capanna74.dk</a>
-              <p>@capannadi74</p>
+              <p>Gl. Kongevej 74D, st.1, Frederiksberg</p>
+              <p>+45 53 77 61 20 </p>
+              <a href="mailto:booking@bar-amore.dk">booking@bar-amore.dk</a>
+              <p>@bar___amore</p>
             </div>
             <div className={styles.socialMediaContainer}>
               <br />
               <p className={styles.bold}>Follow us</p>
-              <img src="/assets/instagram.svg" alt="Instagram" />
-              <img src="/assets/facebook.svg" alt="Facebook" />
+             <a href="https://www.instagram.com/bar___amore/?hl=en">
+             <img src="/assets/instagram.svg" alt="Instagram" /></a> 
+              <img src="/assets/facebook.svg" alt="Facebook" />  
             </div>
           </div>
 
           <div className={styles.rightContainer}>
             <div className={styles.logoContainer}>
-              <img
-                className={styles.itemInvisible}
-                src="/assets/N74.svg"
-                alt="N74 logo"
-              />
+             
             </div>
             <div className={styles.hoursContainer}>
               <p className={styles.bold}>Opening Hours</p>
-              <p>Tuesday, Wednesday, Thursday 17:30 - 23:00</p>
-              <p>Friday & Saturday 17:00 - 00:00</p>
+              <p>Tuesday, Wednesday, Thursday 17:30 - 01:00</p>
+              <p>Friday & Saturday 16:00 - 02:00</p> 
             </div>
             <div className={styles.sisterRestaurantsContainer}>
               <br />

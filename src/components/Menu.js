@@ -2,114 +2,117 @@ import React from "react";
 import styles from "../styles/Menu.module.css";
 
 const Menu = () => {
+  const menuItems = [
+    {
+      danish: "LET-SALTET OKSEMØRBRAD",
+      italian: "CARNE SALATA E GIARDINIERA",
+      price: "85",
+    },
+    {
+      danish: "UMBRISK SKINKE MIN. 4ÅR",
+      italian: "PROSCIUTTO UMBRO",
+      price: "150",
+    },
+    {
+      danish: "DAGENS GRØNNE SALAT",
+      italian: "INSALATA DEL GIORNO",
+      price: "25",
+    },
+    {
+      danish: "FOCACCIA MED OST",
+      italian: "FOCACCIA DI RECCO",
+      price: "65",
+    },
+    {
+      danish: "FRITTEREDE CALAMARI",
+      italian: "CALAMARI FRITTI",
+      price: "85",
+    },
+    {
+      danish: "FRITTERET PIZZA",
+      italian: "PIZZA FRITTA",
+      price: "100",
+    },
+    {
+      danish: "SICILIANSK KARTOFFELSALAT",
+      italian: "INSALATA DI PATATE ALLA SICILIANA",
+      price: "65",
+    },
+    {
+      danish: "MINI KØDBOLLER I TOMATSAUCE",
+      italian: "POLPETTINE IN SUGO",
+      price: "75",
+    },
+    {
+      danish: "SAUTERET ZUCCHINI",
+      italian: "TRIFOLATO DI ZUCCHINE IN PADELLA",
+      price: "65",
+    },
+    {
+      danish: "SKALDYR MED CHILI/TOMATOLIE",
+      italian: "GUAZZETTO DI MARE",
+      price: "100",
+    },
+    {
+      danish: "BLØD POLENTA OG POLPO RAGU",
+      italian: "POLENTA E RAGU DI POLPO",
+      price: "95",
+    },
+    {
+      danish: "DAGENS FISK AL AMORE",
+      italian: "PESCE DEL GIORNO IN PADELLONE",
+      price: "100",
+    },
+    {
+      danish: "PACCHERI I JOMFRUHUMMERBISQUE",
+      italian: "PACCHERI AL SUGO DI SCAMPI",
+      price: "100",
+    },
+    {
+      danish: "SPAGHETTI M. SARDINER PINJEKERNER",
+      italian: "SPAGHETTI CON LE SARDE",
+      price: "100",
+    },
+    {
+      danish: "TAGLIATELLE M. SMØR OG PARMESAN",
+      italian: "TAGLIATELLE BURRO E PARMIGGIANO",
+      price: "120",
+    },
+    {
+      danish: "CANDELE PASTA M. RAGU GENOVESE",
+      italian: "CANDELE AL RAGU GENOVESE",
+      price: "85",
+    },
+    {
+      danish: "CREME CARAMEL",
+      italian: "CREME CARAMEL",
+      price: "50",
+    },
+    {
+      danish: "GRANITA MED BRIOCHE",
+      italian: "GRANITA E BRIOCHE",
+      price: "65",
+    },
+    {
+      danish: "DAGENS HJEMMELAVEDE IS",
+      italian: "GELATO DEL GIORNO",
+      price: "55",
+    },
+  ];
+
   return (
     <article className={styles.menuList}>
       <h2>The Menu</h2>
       <div className={styles.menuItemsContainer}>
-        <div className={styles.menuItems}>
-          <h3>Antipasti</h3>
-          <div>
-            <b>
-              <h5>N°1. Bruschetta al Pomodoro • 40kr.</h5>
-            </b>
-            <p>
-              Toasted bread with diced tomatoes, garlic, basil, and olive oil
-            </p>
+        {menuItems.map((item, index) => (
+          <div key={index} className={styles.menuItem}>
+            <div className={styles.menuItemText}>
+              <span className={styles.danish}>{item.danish}</span>
+              <span className={styles.price}>{item.price}</span>
+              <span className={styles.italian}>{item.italian}</span>
+            </div>
           </div>
-          <div>
-            <h5>N°2. Caprese Salad • 60kr.</h5>
-            <p>
-              Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze
-            </p>
-          </div>
-          <div>
-            <h5>N°3. Prosciutto e Melone • 70kr.</h5>
-            <p>Thinly sliced prosciutto served with melon</p>
-          </div>
-          <div>
-            <h5>N°4. Olive Miste • 50kr.</h5>
-            <p>Mixed marinated olives</p>
-          </div>
-        </div>
-        <div className={styles.menuItems}>
-          <h3>Pasta</h3>
-          <div>
-            <b>
-              <h5>N°1. Spaghetti alla carbonara • 99kr.</h5>
-            </b>
-            <p>Spaghetti with egg, guanciale and pepper</p>
-          </div>
-          <div>
-            <h5>N°2. Fusilli al pesto • 99kr. </h5>
-            <p>Fusilli with pesto alla genovese</p>
-          </div>
-          <div>
-            <h5>N°3. Spaghetti aglio, olio e peperoncino • 119kr.</h5>
-            <p>Spaghetti with oil, toasted garlic and peperoncino</p>
-          </div>
-          <div>
-            <h5>N°4. Penne all’amatriciana • 129kr.</h5>
-            <p>Penne with tomato sauce, meat and basil</p>
-          </div>
-        </div>
-        <div className={styles.menuItems}>
-          <h3>Dolci</h3>
-          <div>
-            <h5>N°1. Tiramisu • 79kr.</h5>
-            <p>Ladyfingers, Espresso, Mascarpone, Eggs, Sugar, Cocoa Powder</p>
-          </div>
-          <div>
-            <h5>N°2. Panna cotta • 59kr.</h5>
-            <p>Heavy cream and vanilla extract</p>
-          </div>
-          <div>
-            <h5>N°3. Amaretti • 29kr.</h5>
-            <p>Almond cookies</p>
-          </div>
-        </div>
-        <div className={styles.menuItems}>
-          <h3>Vini</h3>
-          <div>
-            <b>
-              <h5>N°1. Chianti Classico • 95kr.</h5>
-            </b>
-            <p>Red wine from Tuscany, Italy</p>
-          </div>
-          <div>
-            <h5>N°2. Barolo • 110kr.</h5>
-            <p>Red wine from Piedmont, Italy</p>
-          </div>
-          <div>
-            <h5>N°3. Vermentino • 110kr.</h5>
-            <p>White wine from Sardinia, Italy</p>
-          </div>
-        </div>
-        <div className={styles.menuItems}>
-          <h3>Cocktails</h3>
-          <div>
-            <h5>N°1. Aperol Spritz • 99kr.</h5>
-            <p>Aperol, prosecco and soda</p>
-          </div>
-          <div>
-            <h5>N°2. Mojito • 99kr.</h5>
-            <p>White rum, lime juice and mint leaves</p>
-          </div>
-          <div>
-            <h5>N°3. Negroni • 69kr.</h5>
-            <p>Gin, red vermouth and Campari</p>
-          </div>
-          <div>
-            <h5>N°4. Martini • 99kr.</h5>
-            <p>Gin stirred with dry vermouth</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <img
-          className={styles.address}
-          src="/assets/number-74.svg"
-          alt="Landing Image"
-        />
+        ))}
       </div>
     </article>
   );

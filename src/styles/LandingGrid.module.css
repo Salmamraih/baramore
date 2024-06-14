@@ -23,30 +23,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 70%;
 }
 
-.stampContainer {
-  position: absolute;
-  top: 40%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  background-color: var(--accent-color); /* Set your desired background color */
-  overflow: hidden;
-}
 
-.spinningText {
-  position: absolute;
-  width: 4.6rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px; /* Set your desired font size */
-  color: #fff; /* Set your desired text color */
-  animation: spin 8s linear infinite; /* Adjust the animation duration and timing function as needed */
-}
+
+
 
 /* scroll icon */
 
@@ -143,11 +125,7 @@
     width: 80vw;
   }
 
-  .stampContainer {
-    position: absolute;
-    top: 40%;
-    left: 85%;
-  }
+ 
 }
 @media only screen and (max-width: 400px) {
   .scrollIndicator {
